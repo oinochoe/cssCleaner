@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* variable */
+/* background */
+/* reset */
+.r_mp {
+  margin: 0;
+  padding: 0;
+}
+.r_li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* font */
+/* line height */
+/* size */
+.full {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.fullWidth {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  html:lang(ru-RU) .btn_mid {font-size:0.8rem}
+}
