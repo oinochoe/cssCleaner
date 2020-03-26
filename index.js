@@ -8,7 +8,7 @@ const originSrc = fs
   .map(files => `${origin}/${files}`);
 const outSrc = fs
   .readdirSync(out)
-  .filter(file => /\.css/.test(file))
+  .filter(file => /\.html/.test(file))
   .map(files => `${out}/${files}`);
 
 const options = {
@@ -38,21 +38,18 @@ let css = "";
 for (let index = 0; index < originSrc.length; index++) {
   // after read files
   readFiles().then(function(resolveData) {
-    console.log(css);
-    // writeFile
-    var minified = new CleanCSS(options).minify(css).then(function(output) {
-      return output.styles;
+    let dragon = new CleanCSS({ options, returnPromise: true }).minify(
+      originSrc
+    );
+    dragon.then(function(output) {
+      fs.writeFile(outSrc[index], output);
     });
-    console.log(minified);
-
-    /* new CleanCSS({ options, returnPromise: true })
-        .minify(originSrc)
-        .then(function(resolveData) {
-          fs.writeFile(outSrc[index], resolveData, (error, data) => {
-            if (error) throw error;
-            console.log("생성 완료");
-          });
-        }); */
+    // .then(function(output) {
+    //   fs.writeFile(outSrc[index], output, (error, data) => {
+    //     if (error) throw error;
+    //     console.log("생성 완료");
+    //   });
+    // });
   });
 
   function readFiles() {
