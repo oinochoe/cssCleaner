@@ -31,7 +31,11 @@ const options = {
             beforeValue: true, // controls if a space comes before a value; e.g. `width: 1rem`; defaults to `false`
         },
     },
-    level: 2,
+    level: {
+        3: {
+            all: false,
+        },
+    },
 };
 
 let css = '';
