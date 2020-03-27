@@ -11,5 +11,8 @@
   "devDependencies": {
     "clean-css": "^4.2.3",
     "fs": "0.0.1-security"
+  },
+  "dependencies": {
+    "http": "^0.0.1-security"
   }
 }
