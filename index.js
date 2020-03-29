@@ -43,7 +43,7 @@ let css = '';
 for (let index = 0; index < originSrc.length; index++) {
     // after read files
     readFiles().then(function(resolveData) {
-        let cleanUp = new CleanCSS(options, { level: 3 }).minify(resolveData);
+        let cleanUp = new CleanCSS(options).minify(resolveData);
         setTimeout(function() {
             fs.writeFile(outSrc[index], cleanUp.styles, (error, data) => {
                 if (error) throw error;
