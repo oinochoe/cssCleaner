@@ -5,7 +5,8 @@
 .fullWidth {width: 100%}
 ul > li a {width:300px;}
 @media screen and (max-width:1024px) {
-html:lang(ru-RU) .btn_mid {font-size: .8rem; transform:translate(30px, -30px, 1px)}
+  html:lang(ru-RU) .btn_mid {
+    font-size: .8rem; transform:translate(30px, -30px, 1px)}
 }/*!
   Important comments included in optimized output.
 */
