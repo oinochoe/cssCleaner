@@ -28,7 +28,18 @@ const options = {
         spaces: {
             aroundSelectorRelation: true, // controls if spaces come around selector relations; e.g. `div > a`; defaults to `false`
             beforeBlockBegins: true, // controls if a space comes before a block begins; e.g. `.block {`; defaults to `false`
-            beforeValue: true, // controls if a space comes before a value; e.g. `width: 1rem`; defaults to `false`
+            beforeValue: false, // controls if a space comes before a value; e.g. `width: 1rem`; defaults to `false`
+        },
+    },
+    level: {
+        1: {
+            all: false,
+        },
+        2: {
+            all: false,
+        },
+        3: {
+            all: false,
         },
     },
 };
